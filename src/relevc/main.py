@@ -1,4 +1,5 @@
 """ The following modules should b tested for performance concern: Threading, Multiprocessing, Concurent"""
+
 import os, csv, argparse
 from concurrent import futures
 from multiprocessing import Pool
@@ -29,13 +30,18 @@ def main():
     ### Start Processing Top 50 Products
     ### Thread based parallelism using concurent Module
     ### Test process based parallelism
-    #process_top_50_products(chunk_size, input)
+    debut = time()
+    process_top_50_products(chunk_size, input)
+    fin = time()
+    print(f"Top 50 CA duration: {(fin - debut)/60} Minutes")
 
     ### Start Processing Top 100 Store by Product
     ### Looping through each product and by using thread-based parallelism
     #process_top_100_store_by_product("Top_50_products.csv")
-
+    debut = time()
     process_top_100_store("Top_50_products.csv")
+    fin = time()
+    print(f"Top 100 Store by product duration: {(fin - debut)/60} Minutes")
 
     
 def process_top_50_products(chunk_size, inputpath):
