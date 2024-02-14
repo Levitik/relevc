@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "relevc"
+version = "0.1.0"
+description = ""
+authors = ["narcisse_madogni <n.madogni@gmail.com>"]
+readme = "README.md"
+packages = [{include = "relevc", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
