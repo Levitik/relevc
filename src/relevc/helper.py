@@ -7,7 +7,7 @@ def file_writer(rows, file, prefix=None):
         writer.writerows(rows)
 
 def writer(rows, file, prefix=None):
-    filename = f"./chunck/{file}_{prefix}.csv" if prefix else f"{file}.csv"
+    filename = f"./chunk/{file}_{prefix}.csv" if prefix else f"{file}.csv"
     with open(filename, 'w') as file:
         file.write(rows)
 
